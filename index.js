@@ -16,10 +16,6 @@ btn.addEventListener('click', function () {
    
 })
 
-
-
-
-
 function arrayFromText () {
     let urlArray = textArea.value.split('\n')
     for (let i = 0; i < urlArray.length; i++) {
@@ -34,7 +30,6 @@ function makeNewForm() {
     <textarea name="" id="urli" cols="30" rows="10" placeholder="сюда артикулы поставщика"></textarea>
     <button id="btn2">Преобразовать</button>
     `)
-   
 }
 
 
@@ -45,8 +40,7 @@ function makeForm() {
     renderAllLists()  
     goToPage ()
     console.log(obj);
-    })
-    
+    })   
 }
 
 
@@ -60,26 +54,31 @@ function renderAllLists() {
        urls.filter(function(item) {
         if (item.includes(key)) {
             return obj[key].push(item)
-          }
-            
-            
-            
+          }  
         })
     })
-
 }
 
 function goToPage () {
     for (key in obj) {
         let arty = document.createElement('li')
         let urr = document.createElement('li')
-        if (obj[key]) {
+
+        if (obj[key].length) {
+
             articuls.insertAdjacentElement('beforeend', arty)
             arty.textContent = key
+
             linksList.insertAdjacentElement('beforeend', urr)
             urr.textContent = obj[key]
+
         } else {
-            urr.insertAdjacentElement('beforeend', urr.textContent = 'НИХУЯ НЕТ!')
+            articuls.insertAdjacentElement('beforeend', arty)
+            arty.textContent = key
+
+            linksList.insertAdjacentElement('beforeend', urr)
+            urr.textContent = '0'
         }
     }
 }
+
