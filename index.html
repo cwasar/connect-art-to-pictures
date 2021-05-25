@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сопоставление картинок и артикулов партнеров</title>
+    <style>
+    .col {
+        display: flex;
+    }
+    li {
+        list-style: none;
+    }
+    .container {
+        display: flex;
+    }
+    </style>
+</head>
+<body>
+    <h3>Сюда надо вставить ссылки с этой страницы <a href="http://ex.restoracia.ru/list-url.php" target="_blank">КЛИК</a>, предварительно залив фотки по FTP (<a href="https://www.filezilla.ru/download/FileZilla_3.53.1_win64-setup.exe">скачать FileZilla</a>)</h3>
+    <div class="container">
+        <textarea name="" id="links" cols="40" rows="10"></textarea>
+        <button id="btn">отправить</button>
+
+    </div>
+   
+    <div class="col">
+        <ul id="articuls"></ul>
+        <ul id="links-list"></ul>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
